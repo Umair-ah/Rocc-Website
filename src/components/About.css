@@ -20,13 +20,29 @@
 }
 
 .about-text .section-title {
-  text-align: left;
   margin-bottom: 1.5rem;
 }
 
+.english-layout .about-text .section-title {
+  text-align: left;
+}
+
+.arabic-layout .about-text .section-title {
+  text-align: right;
+}
+
 .about-text .section-title::after {
-  left: 0;
   transform: none;
+}
+
+.english-layout .about-text .section-title::after {
+  left: 0;
+  right: auto;
+}
+
+.arabic-layout .about-text .section-title::after {
+  right: 0;
+  left: auto;
 }
 
 .about-description {
@@ -40,9 +56,18 @@
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0;
-  border-left: 4px solid var(--accent-color);
   box-shadow: var(--shadow-sm);
   position: relative;
+}
+
+.english-layout .about-quote {
+  border-left: 4px solid var(--accent-color);
+  border-right: none;
+}
+
+.arabic-layout .about-quote {
+  border-right: 4px solid var(--accent-color);
+  border-left: none;
 }
 
 .quote-icon {
@@ -52,8 +77,17 @@
   line-height: 1;
   opacity: 0.3;
   position: absolute;
-  /* top: 1rem; */
+  top: 1rem;
+}
+
+.english-layout .quote-icon {
   left: 1.5rem;
+  right: auto;
+}
+
+.arabic-layout .quote-icon {
+  right: 1.5rem;
+  left: auto;
 }
 
 .quote-text {
@@ -62,17 +96,37 @@
   color: var(--text-dark);
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   margin: 0;
-  padding-left: 2rem;
   position: relative;
   z-index: 1;
 }
 
+.english-layout .quote-text {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+.arabic-layout .quote-text {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
 .quote-signature {
   margin-top: 1rem;
-  padding-left: 2rem;
   font-weight: 600;
   color: var(--primary-color);
   font-size: 1rem;
+}
+
+.english-layout .quote-signature {
+  padding-left: 2rem;
+  padding-right: 0;
+  text-align: left;
+}
+
+.arabic-layout .quote-signature {
+  padding-right: 2rem;
+  padding-left: 0;
+  text-align: right;
 }
 
 .chairman-speech {
@@ -188,11 +242,20 @@
   content: '';
   position: absolute;
   top: -50%;
-  right: -50%;
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(208, 166, 65, 0.15) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
+}
+
+.english-layout .visual-card::before {
+  right: -50%;
+  left: auto;
+}
+
+.arabic-layout .visual-card::before {
+  left: -50%;
+  right: auto;
 }
 
 @keyframes rotate {

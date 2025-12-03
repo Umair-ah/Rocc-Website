@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
 type Language = 'en' | 'ar';
 
@@ -418,9 +418,15 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     return translations[language][key] || key;
   };
 
+  useEffect(() => {
+    // Update HTML lang and dir attributes
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+  }, [language]);
+
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      <div dir={language === 'ar' ? 'rtl' : 'ltr'} className={language === 'ar' ? 'arabic-layout' : ''}>
+      <div dir={language === 'ar' ? 'rtl' : 'ltr'} className={language === 'ar' ? 'arabic-layout' : 'english-layout'}>
         {children}
       </div>
     </LanguageContext.Provider>

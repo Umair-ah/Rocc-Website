@@ -75,7 +75,7 @@
 }
 
 .hero-title {
-  color: var(--text-white);
+  color: #d3a958;
   margin-bottom: 1.5rem;
   font-weight: 700;
   animation-delay: 0.4s;
@@ -87,7 +87,7 @@
 
 .hero-subtitle {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #d3a958;
   margin-bottom: 2.5rem;
   line-height: 1.8;
   animation-delay: 0.6s;
@@ -127,7 +127,7 @@
 
 .stat-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #d3a958;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

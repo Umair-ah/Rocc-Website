@@ -92,7 +92,16 @@
 
 .footer-links a:hover {
   color: var(--secondary-color);
+}
+
+.english-layout .footer-links a:hover {
   padding-left: 0.5rem;
+  padding-right: 0;
+}
+
+.arabic-layout .footer-links a:hover {
+  padding-right: 0.5rem;
+  padding-left: 0;
 }
 
 .footer-contact p {

@@ -19,7 +19,16 @@
   background: var(--bg-light);
   padding: 2rem;
   border-radius: 12px;
+}
+
+.english-layout .info-card {
   border-left: 4px solid var(--primary-color);
+  border-right: none;
+}
+
+.arabic-layout .info-card {
+  border-right: 4px solid var(--primary-color);
+  border-left: none;
   transition: var(--transition);
 }
 
