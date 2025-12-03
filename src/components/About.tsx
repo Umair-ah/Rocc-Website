@@ -9,7 +9,7 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <span className="section-label">{t('about.label')}</span>
+            {/* <span className="section-label">{t('about.label')}</span> */}
             <h2 className="section-title">{t('about.title')}</h2>
             <p className="about-description">
               {t('about.description1')}

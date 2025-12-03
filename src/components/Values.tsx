@@ -17,7 +17,7 @@ const Values = () => {
   return (
     <section className="section values-section">
       <div className="container">
-        <span className="section-label">{t('values.label')}</span>
+        {/* <span className="section-label">{t('values.label')}</span> */}
         <h2 className="section-title">{t('values.title')}</h2>
         <p className="section-subtitle">
           {t('values.subtitle')}
