@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,11 +44,11 @@ body {
 
 .arabic-layout body,
 .arabic-layout {
-  font-family: 'Cairo', 'Arial', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', 'Arial', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-dark);
@@ -60,12 +60,12 @@ h1, h2, h3, h4, h5, h6 {
 .arabic-layout h4,
 .arabic-layout h5,
 .arabic-layout h6 {
-  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .arabic-layout .hero-title,
 .arabic-layout .hero-subtitle {
-  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 h1 {
@@ -139,7 +139,7 @@ img {
 .section-subtitle {
   text-align: center;
   color: var(--text-light);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;

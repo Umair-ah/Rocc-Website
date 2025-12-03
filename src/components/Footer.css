@@ -21,16 +21,12 @@
 }
 
 .footer-logo .logo-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--secondary-color);
   line-height: 1;
   display: block;
-}
-
-.arabic-layout .footer-logo .logo-text {
-  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
 }
 
 .footer-logo .logo-subtitle {
@@ -78,7 +74,7 @@
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   color: var(--text-white);
-  font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .footer-links {

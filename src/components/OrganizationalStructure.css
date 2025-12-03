@@ -18,7 +18,7 @@
 }
 
 .org-level-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: 1.8rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
@@ -71,7 +71,7 @@
 
 .org-count {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--secondary-color);
 }
 
