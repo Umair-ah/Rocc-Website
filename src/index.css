@@ -294,7 +294,7 @@ img {
   left: 0;
   right: auto;
   transform: none;
-}
+  }
 
 .arabic-layout .service-link {
   direction: rtl;

@@ -4,14 +4,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(271deg, #d3a958 0%, #d3a958 85%, #fefefe 10%);
+  background: #d3a958;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
 .header.scrolled {
-  background: linear-gradient(271deg, #d3a958 0%, #d3a958 85%, #fefefe 10%);
+  background: #d3a958;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   padding: 0;
 }
@@ -26,18 +26,14 @@
   align-items: center;
   padding: 1rem 0;
   gap: 2rem;
-  position: relative;
 }
 
 .logo {
-  position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
   height: 50px;
-  z-index: 10;
-  flex-shrink: 0;
 }
 
 .logo:hover {
@@ -46,70 +42,16 @@
 }
 
 .logo-image {
-  position: relative;
-  /* height: 100%;
+  /* height: 100%; */
   width: auto;
-  max-height: 50px; */
-  max-width: 125px;
+  /* max-height: 50px; */
+  max-height: 70px;
   object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
+  transition: var(--transition);
 }
 
-/* .logo:hover .logo-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 60px;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-} */
-
-.header.scrolled .logo {
-  position: absolute;
-  height: 60px;
-  width: calc(100% - 4rem);
-  max-width: 400px;
-  z-index: 10;
-}
-
-.english-layout .header.scrolled .logo {
-  left: 2rem;
-  right: auto;
-}
-
-.arabic-layout .header.scrolled .logo {
-  right: 2rem;
-  left: auto;
-}
-
-.header.scrolled .logo-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 60px;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.header.scrolled .nav-menu {
-  margin-left: auto;
-  position: relative;
-  z-index: 5;
-}
-
-.english-layout .header.scrolled .nav-menu {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.arabic-layout .header.scrolled .nav-menu {
-  margin-right: auto;
-  margin-left: 0;
+.logo:hover .logo-image {
+  transform: scale(1.05);
 }
 
 .logo-text {
@@ -237,22 +179,6 @@
 }
 
 @media (max-width: 968px) {
-  .header.scrolled .logo {
-    position: relative;
-    left: auto;
-    right: auto;
-    width: auto;
-    max-width: 200px;
-    height: 50px;
-  }
-
-  .header.scrolled .logo-image {
-    width: auto;
-    max-width: 200px;
-    max-height: 50px;
-    object-fit: contain;
-  }
-
   .mobile-menu-toggle {
     display: flex;
   }
