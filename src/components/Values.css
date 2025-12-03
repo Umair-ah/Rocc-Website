@@ -1,0 +1,76 @@
+.values-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  color: var(--text-white);
+}
+
+.values-section .section-label {
+  color: var(--accent-color);
+}
+
+.values-section .section-title {
+  color: var(--text-white);
+}
+
+.values-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.value-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  transition: var(--transition);
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.value-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+  }
+}
+

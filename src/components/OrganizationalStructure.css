@@ -1,0 +1,103 @@
+.org-section {
+  background: var(--bg-light);
+}
+
+.org-content {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.org-level {
+  background: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.org-level-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.org-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--bg-light);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.org-item:hover {
+  background: var(--primary-color);
+  color: var(--text-white);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.org-role {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.org-item:hover .org-role {
+  color: var(--text-white);
+}
+
+.org-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.org-item:hover .org-name {
+  color: var(--text-white);
+}
+
+.org-count {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.org-item:hover .org-count {
+  color: var(--text-white);
+}
+
+.org-total {
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: var(--text-white);
+}
+
+.org-total .org-role,
+.org-total .org-count {
+  color: var(--text-white);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .org-level {
+    padding: 2rem 1.5rem;
+  }
+}
+

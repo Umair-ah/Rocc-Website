@@ -1,0 +1,429 @@
+import { createContext, useContext, useState, ReactNode } from 'react';
+
+type Language = 'en' | 'ar';
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within LanguageProvider');
+  }
+  return context;
+};
+
+interface LanguageProviderProps {
+  children: ReactNode;
+}
+
+export const LanguageProvider = ({ children }: LanguageProviderProps) => {
+  const [language, setLanguage] = useState<Language>('en');
+
+  const translations: Record<Language, Record<string, string>> = {
+    en: {
+      // Navigation
+      'nav.home': 'Home',
+      'nav.about': 'About',
+      'nav.services': 'Services',
+      'nav.projects': 'Projects',
+      'nav.contact': 'Contact',
+      'nav.arabic': 'العربية',
+      
+      // Hero
+      'hero.established': 'Established 2013',
+      'hero.title.line1': 'Gulf Wealth Trading Holding Co.',
+      'hero.title.line2': 'Building a Prosperous Future',
+      'hero.subtitle': 'Gulf Wealth Trading Holding Co. is a leading Saudi company with a diverse portfolio of businesses, committed to excellence and innovation.',
+      'hero.button.projects': 'View Our Projects',
+      'hero.button.quote': 'Get a Quote',
+      'hero.stat.years': 'Years Experience',
+      'hero.stat.projects': 'Projects Completed',
+      'hero.stat.satisfaction': 'Client Satisfaction',
+      'hero.scroll': 'Scroll',
+      
+      // About
+      'about.label': 'About Us',
+      'about.title': 'Who We Are?',
+      'about.description1': 'With big dreams and great goals, with global thinking and high direction, with national management and ancient experiences, Gulf Wealth Trading Holding Co was established as a Saudi company with a global approach.',
+      'about.description2': 'The Kingdom\'s great development and rich progress made us take upon ourselves the secretariat of the contribution and the responsibility of participation, so we set our sights on being an active partner and a creative contributor to that progress and development.',
+      'about.description3': 'What increased the strength of our enthusiasm and raised the intensity of our desire is to follow the trail of the majestic Tuwaiq Mountain and the godfather of the modern renaissance (His Royal Highness Prince Mohammed bin Salman), the visionary and standard-bearer, may God protect him.',
+      'about.chairman.speech': 'With big dreams and great goals, with global thinking and high direction, with national management and ancient experiences, Gulf Wealth Trading Holding Co was established as a Saudi company with a global approach. The Kingdom\'s great development and rich progress made us take upon ourselves the secretariat of the contribution and the responsibility of participation, so we set our sights on being an active partner and a creative contributor to that progress and development. What increased the strength of our enthusiasm and raised the intensity of our desire is to follow the trail of the majestic Tuwaiq Mountain and the godfather of the modern renaissance (His Royal Highness Prince Mohammed bin Salman), the visionary and standard-bearer, may God protect him.',
+      'about.quote': 'Science is about knowing. Engineering is about doing.',
+      'about.feature.team.title': 'Expert Team',
+      'about.feature.team.desc': 'Experienced engineers and architects',
+      'about.feature.quality.title': 'Quality First',
+      'about.feature.quality.desc': 'Highest quality standards',
+      'about.feature.innovation.title': 'Innovation',
+      'about.feature.innovation.desc': 'Modern solutions and technologies',
+      'about.vision.title': 'Our Vision',
+      'about.vision.text': 'Gulf Wealth Trading Holding Co aim to become one of the leading company in contracting sector, architectural design and interior design in the Kingdom Saudi Arabia.',
+      'about.chairman': 'A. Thamer bin Mohammed',
+      'about.vision.button': 'Learn More',
+      
+      // Services
+      'services.label': 'Our Services',
+      'services.title': 'What We Do?',
+      'services.subtitle': 'We provide comprehensive construction and engineering services with a commitment to excellence and innovation in every project.',
+      'services.construction.title': 'Architectural Construction Department',
+      'services.construction.desc': 'High quality, punctuality and reasonable price are the foundations upon which the Architectural Construction Department is based. It is supported by modern equipment, huge capabilities, and a group of experienced engineers, qualified technicians, and trained workers.',
+      'services.stone.title': 'Stone and Marble Department',
+      'services.stone.desc': 'We keep pace with development and accompany progress in our constant pursuit to achieve the satisfaction of our customers and gain their trust. With the aesthetic value represented by stone facades and marble decorations, we execute all kinds of stone works and install marble pieces in all their forms.',
+      'services.decoration.title': 'Decoration and Decorative Works Department',
+      'services.decoration.desc': 'Art pieces and decorative works are the final touch that gives the place the required aesthetic and desired splendor. Our long-standing experience and distinctive competencies are fully prepared to carry out all types of interior and exterior decoration.',
+      'services.learnMore': 'Learn More →',
+      
+      // Values
+      'values.label': 'Our Values',
+      'values.title': 'What Drives Us',
+      'values.subtitle': 'Our core values guide every decision we make and every project we undertake.',
+      'values.trust': 'TRUST',
+      'values.excellence': 'EXCELLENCE',
+      'values.accountability': 'ACCOUNTABILITY',
+      'values.collaboration': 'COLLABORATION',
+      'values.service': 'SERVICE',
+      'values.innovation': 'INNOVATION',
+      'values.gratitude': 'GRATITUDE',
+      
+      // Projects
+      'projects.label': 'Our Projects',
+      'projects.title': 'Some of Projects',
+      'projects.subtitle': 'Explore our portfolio of successful projects across various sectors, showcasing our expertise and commitment to excellence.',
+      'projects.commercial': 'Commercial',
+      'projects.residential': 'Residential',
+      'projects.entertainment': 'Entertainment',
+      'projects.viewDetails': 'View Details',
+      'projects.viewAll': 'View All Projects',
+      'projects.ministryFinance': 'Finance Ministry',
+      'projects.ministryHajj': 'Ministry of Hajj and Umrah',
+      'projects.holyMosque': 'Presidency of the Holy Mosque',
+      'projects.militaryCommand': 'Military Unified Command',
+      'projects.socialSecurity': 'General Organization for Social Security',
+      'projects.generalSecurity': 'General Security',
+      'projects.defense': 'Department of Defense',
+      'projects.kingdomDates': 'Kingdom Dates Company',
+      'projects.kyrgyzEmbassy': 'Kyrgyz Embassy',
+      'projects.cayanTower': 'Cayan Tower',
+      'projects.chamberCommerce': 'Chamber of Commerce - Dammam',
+      'projects.reefVillage': 'Reef Village',
+      'projects.saadeddin': 'Saadeddin Restaurants and Coffees',
+      'projects.sheikhFahdVilla': 'Sheikh Fahd Al-Sudairi Villa - Al-Malqa',
+      'projects.coffeeLisibland': 'Coffee Lisibland Finishing Works',
+      'projects.tatelRestaurant': 'Tatel Restaurant - Al-Bujairi Al-Diriyah',
+      'projects.coffeeSintra': 'Coffee Sintra - Al-Bujairi - Diriyah',
+      'projects.coffeeFlamo': 'Coffee Flamo - Al-Bujairi - Diriyah',
+      'projects.coffeeTVM': 'Coffee TVM - Al-Bujairi - Diriyah',
+      'projects.fifaFitClub': 'FIFA Fit Club - Riyadh',
+      'projects.alMakanOffices': 'Al-Makan Company Offices - Riyadh',
+      'projects.electricityTowers': 'Electricity Company Towers - Qassim Road',
+      'projects.alFadhili': 'Al Fadhili Project - Nesma Company',
+      'projects.ibrahimVillas': 'Ibrahim Mohammed Al-Jabr Villas - Al-Khobar',
+      'projects.princeAhmedRest': 'Rest House Prince Ahmed - Wadi Hanifa',
+      'projects.drFahdRest': 'Dr. Fahd Al-Semaris Rest House - Al-Uyaynah',
+      'projects.sheikhAliRest': 'Sheikh Ali Al-Shadi Rest House - Huraymila',
+      'projects.reefCenter': 'Reef Center Stone Facade - Al-Seedan Company',
+      'projects.officeHouses': 'External Drawers - Office Houses Company - Orouba Road',
+      'projects.sheikhAhmedVilla': 'Sheikh Ahmed Al-Mousa Villa - Al-Malqa',
+      'projects.fatimaMosque': 'Fatima Abdul Latif Al-Mousa Mosque - Al-Ahsaa',
+      'projects.saadEddeinNahdha': 'Saad Eddein Sweets - Al Nahdha Road',
+      'projects.saadEddeinMurabaa': 'Saad Eddein Sweets - Al Murabaa',
+      'projects.saadeddinUniversity': 'Saadeddin Restaurants and Coffees - Prince Sultan University',
+      'projects.bajaShopes': 'Baja Shopes - Anas bin Malk Road',
+      'projects.alQahtaniTransport': 'Al-Qahtani Automotive Transport Company',
+      'projects.qassimGardens': 'Qassim Gardens Company',
+      'projects.ministryEducation': 'Ministry of Education',
+      'projects.establishmentSecurity': 'Establishment Security',
+      'projects.roadsSecurity': 'Roads Security',
+      'projects.dammamHospital': 'Dammam Central Hospital',
+      'projects.rubouaQassim': 'Ruboua Al-Qassim Trading Company',
+      'projects.amwajKhaleej': 'Amwaj Al Khaleej Contracting & General Supplies Company',
+      'projects.alHawadi': 'Al-Hawadi Company Limited',
+      'projects.alAmmar': 'Al Ammar Contracting Company',
+      'projects.cyberSecurity': 'Cyber Security',
+      
+      // Clients
+      'clients.label': 'Our Clients',
+      'clients.title': 'Trusted Partners',
+      'clients.subtitle': 'We are proud to work with leading organizations across various industries.',
+      
+      // Certificates
+      'certificates.label': 'Certificates',
+      'certificates.title': 'Our Certifications',
+      'certificates.subtitle': 'We maintain the highest standards and hold various industry certifications.',
+      'certificates.viewAll': 'View All Certificates',
+      
+      // Contact
+      'contact.label': 'Contact Us',
+      'contact.title': 'Get In Touch',
+      'contact.subtitle': 'Have a project in mind? Let\'s discuss how we can bring your vision to life.',
+      'contact.email': 'Email',
+      'contact.phone': 'Phone',
+      'contact.address': 'Address',
+      'contact.form.name': 'Full Name',
+      'contact.form.namePlaceholder': 'Your name',
+      'contact.form.email': 'Email Address',
+      'contact.form.emailPlaceholder': 'your.email@example.com',
+      'contact.form.phone': 'Phone Number',
+      'contact.form.phonePlaceholder': '+966 50 000 0000',
+      'contact.form.department': 'Department',
+      'contact.form.departmentSelect': 'Select Department',
+      'contact.form.departmentBusiness': 'Business Department',
+      'contact.form.departmentPersonal': 'Personal Department',
+      'contact.form.departmentSupport': 'Support Department',
+      'contact.form.departmentOthers': 'Others',
+      'contact.form.message': 'Message',
+      'contact.form.messagePlaceholder': 'Tell us about your project...',
+      'contact.form.submit': 'Send Message',
+      'contact.form.success': 'Thank you for your message! We will get back to you soon.',
+      'contact.banking': 'Banking Information',
+      'contact.accountNumber': 'Current Account No.',
+      'contact.iban': 'IBAN',
+      'contact.accountNumberValue': '1000369469940',
+      'contact.ibanValue': 'SA4620000001000369469940',
+      
+      // Organizational Structure
+      'org.label': 'Our Team',
+      'org.title': 'Organizational Structure',
+      'org.subtitle': 'Our dedicated team of professionals across all departments',
+      'org.management': 'Management',
+      'org.chairman': 'Chairman of Board / General Manager',
+      'org.chairmanName': 'M. Thamer bin Mohammed',
+      'org.administrators': 'Administrators',
+      'org.costAccountant': 'Cost Accountant',
+      'org.publicAccountant': 'Public Accountant',
+      'org.financialManager': 'Financial Manager',
+      'org.executiveSecretary': 'Executive Secretary',
+      'org.engineers': 'Engineers and Observers',
+      'org.foreman': 'Foreman',
+      'org.surveyor': 'Surveyor',
+      'org.architect': 'Architect',
+      'org.civilEngineer': 'Civil Engineer',
+      'org.technicians': 'Technicians and Competencies',
+      'org.total': 'Total',
+      
+      // Gallery
+      'gallery.label': 'Gallery',
+      'gallery.title': 'Project Gallery',
+      'gallery.subtitle': 'Explore our extensive portfolio of completed projects and ongoing work.',
+      
+      // Footer
+      'footer.description': 'Gulf Wealth Trading Holding Co. was established as a Saudi company with a global approach, providing comprehensive construction, engineering, and design services.',
+      'footer.quickLinks': 'Quick Links',
+      'footer.services': 'Services',
+      'footer.contactInfo': 'Contact Info',
+      'footer.copyright': '© 2025 Gulf Wealth Trading Holding Co. All Rights Reserved.',
+      'footer.privacy': 'Privacy Policy',
+    },
+    ar: {
+      // Navigation
+      'nav.home': 'الرئيسية',
+      'nav.about': 'من نحن',
+      'nav.services': 'الخدمات',
+      'nav.projects': 'المشاريع',
+      'nav.contact': 'اتصل بنا',
+      'nav.arabic': 'English',
+      
+      // Hero
+      'hero.established': 'تأسست عام 2013',
+      'hero.title.line1': 'شركة ثراء الخليج القابضة',
+      'hero.title.line2': 'بناء مستقبل مزدهر',
+      'hero.subtitle': 'شركة ثراء الخليج القابضة هي شركة سعودية رائدة ذات محفظة أعمال متنوعة، ملتزمة بالتميز والابتكار.',
+      'hero.button.projects': 'عرض مشاريعنا',
+      'hero.button.quote': 'احصل على عرض سعر',
+      'hero.stat.years': 'سنوات من الخبرة',
+      'hero.stat.projects': 'مشروع مكتمل',
+      'hero.stat.satisfaction': 'رضا العملاء',
+      'hero.scroll': 'انتقل',
+      
+      // About
+      'about.label': 'من نحن',
+      'about.title': 'من نحن؟',
+      'about.description1': 'بأحلام كبيرة وأهداف عظيمة ، بفكر عالمي وتوجه عال ، بإدارة وطنية وخبرات عريقة ، تاسست شركة الثروة الخليجية للتجارة القابضة كشركة سعودية الموطن عالمية المنهج',
+      'about.description2': 'ما تعيشه المملكة من تطور كبير وتقدم زاخر جعلنا نأخذ على عاتقنا أمانة المساهمة ومسؤولية المشاركة ، فوضعنا نصب العين أن نكون شريكاً فاعلاً ومساهما مبدعا في ذلك التقدم وهذا التطور.',
+      'about.description3': 'ومما زاد من قوة الحماس لدينا ورفع من شدة الرغبة عندنا هو أن نقتفي أثر جبل طويق الشامخ وعراب النهضة الحديثة ) سيدي صاحب السمو الملكي الأمير محمد بن سلمان ) صاحب الرؤية وحامل اللواء حفظه الله.',
+      'about.chairman.speech': 'بأحلام كبيرة وأهداف عظيمة ، بفكر عالمي وتوجه عال ، بإدارة وطنية وخبرات عريقة ، تاسست شركة الثروة الخليجية للتجارة القابضة كشركة سعودية الموطن عالمية المنهج. ما تعيشه المملكة من تطور كبير وتقدم زاخر جعلنا نأخذ على عاتقنا أمانة المساهمة ومسؤولية المشاركة ، فوضعنا نصب العين أن نكون شريكاً فاعلاً ومساهما مبدعا في ذلك التقدم وهذا التطور. ومما زاد من قوة الحماس لدينا ورفع من شدة الرغبة عندنا هو أن نقتفي أثر جبل طويق الشامخ وعراب النهضة الحديثة ) سيدي صاحب السمو الملكي الأمير محمد بن سلمان ) صاحب الرؤية وحامل اللواء حفظه الله.',
+      'about.quote': 'العلم هو المعرفة. الهندسة هي العمل.',
+      'about.feature.team.title': 'فريق خبير',
+      'about.feature.team.desc': 'مهندسون ومهندسون معماريون ذوو خبرة',
+      'about.feature.quality.title': 'الجودة أولاً',
+      'about.feature.quality.desc': 'أعلى معايير الجودة',
+      'about.feature.innovation.title': 'الابتكار',
+      'about.feature.innovation.desc': 'حلول وتقنيات حديثة',
+      'about.vision.title': 'رؤيتنا',
+      'about.vision.text': 'تهدف شركة الثروة الخليجية للتجارة القابضة إلى أن تصبح واحدة من الشركات الرائدة في قطاع المقاولات والتصميم المعماري والتصميم الداخلي في المملكة العربية السعودية.',
+      'about.chairman': 'م . ثامر بن محمد',
+      'about.vision.button': 'اعرف المزيد',
+      
+      // Services
+      'services.label': 'خدماتنا',
+      'services.title': 'ماذا نفعل؟',
+      'services.subtitle': 'نقدم خدمات شاملة في البناء والهندسة مع الالتزام بالتميز والابتكار في كل مشروع.',
+      'services.construction.title': 'قسم الإنشاءات المعمارية',
+      'services.construction.desc': 'الجودة العالية والدقة في المواعيد والسعر المعقول هي الأسس التي يقوم عليها قسم الإنشاءات المعمارية. وهو مدعوم بمعدات حديثة وإمكانيات ضخمة ومجموعة من المهندسين ذوي الخبرة والفنيين المؤهلين والعمال المدربين.',
+      'services.stone.title': 'قسم الحجر والرخام',
+      'services.stone.desc': 'نساير التطور ونواكب التقدم في سعينا الدائم لتحقيق رضا عملائنا وكسب ثقتهم. وبالقيمة الجمالية التي تمثلها الواجهات الحجرية والزخارف الرخامية، ننفذ جميع أنواع أعمال الحجر وتركيب قطع الرخام بجميع أشكالها.',
+      'services.decoration.title': 'قسم الديكور والأعمال الزخرفية',
+      'services.decoration.desc': 'الأعمال الفنية والأعمال الزخرفية هي اللمسة الأخيرة التي تعطي المكان الجمالية المطلوبة والبذخ المرغوب. خبرتنا الطويلة وكفاءاتنا المميزة جاهزة بالكامل لتنفيذ جميع أنواع الديكور الداخلي والخارجي.',
+      'services.learnMore': 'اعرف المزيد →',
+      
+      // Values
+      'values.label': 'قيمنا',
+      'values.title': 'ما يدفعنا',
+      'values.subtitle': 'قيمنا الأساسية توجه كل قرار نتخذه وكل مشروع نقوم به.',
+      'values.trust': 'الثقة',
+      'values.excellence': 'التميز',
+      'values.accountability': 'المساءلة',
+      'values.collaboration': 'التعاون',
+      'values.service': 'الخدمة',
+      'values.innovation': 'الابتكار',
+      'values.gratitude': 'الامتنان',
+      
+      // Projects
+      'projects.label': 'مشاريعنا',
+      'projects.title': 'بعض المشاريع',
+      'projects.subtitle': 'استكشف محفظة مشاريعنا الناجحة عبر مختلف القطاعات، مما يعرض خبرتنا والتزامنا بالتميز.',
+      'projects.commercial': 'تجاري',
+      'projects.residential': 'سكني',
+      'projects.entertainment': 'ترفيهي',
+      'projects.viewDetails': 'عرض التفاصيل',
+      'projects.viewAll': 'عرض جميع المشاريع',
+      'projects.ministryFinance': 'وزارة المالية',
+      'projects.ministryHajj': 'وزارة الحج والعمرة',
+      'projects.holyMosque': 'رئاسة الحرم المكي',
+      'projects.militaryCommand': 'القيادة الموحدة العسكرية',
+      'projects.socialSecurity': 'المؤسسة العامة للتأمينات الإجتماعية',
+      'projects.generalSecurity': 'الأمن العام',
+      'projects.defense': 'وزارة الدفاع',
+      'projects.kingdomDates': 'شركة المملكة للتمور',
+      'projects.kyrgyzEmbassy': 'سفارة قرغيزستان',
+      'projects.cayanTower': 'برج كيان',
+      'projects.chamberCommerce': 'الغرفة التجارية - الدمام',
+      'projects.reefVillage': 'ريف فيلج',
+      'projects.saadeddin': 'مطاعم وكافيهات سعد الدين',
+      'projects.sheikhFahdVilla': 'فيلا الشيخ فهد السديري - الملقا',
+      'projects.coffeeLisibland': 'أعمال تشطيب كوفي ليسيبلاند',
+      'projects.tatelRestaurant': 'أعمال تشطيب مطعم تاتيل - البجيري الدرعية',
+      'projects.coffeeSintra': 'أعمال تشطيب كوفي سينترا - البجيري - الدرعية',
+      'projects.coffeeFlamo': 'أعمال تشطيب كوفي فلامو - البجيري - الدرعية',
+      'projects.coffeeTVM': 'أعمال تشطيب كوفي تي في ام - البجيري - الدرعية',
+      'projects.fifaFitClub': 'أعمال تشطيب نادي فيفا فيت الرياض',
+      'projects.alMakanOffices': 'أعمال تشطيب مكاتب شركة المكان - الرياض',
+      'projects.electricityTowers': 'أبراج شركة الكهرباء - طريق القصيم',
+      'projects.alFadhili': 'مشروع الفاضلي - شركة نسمة',
+      'projects.ibrahimVillas': 'مشروع فلل إبراهيم محمد الجبر - الخبر - حي المهندسين',
+      'projects.princeAhmedRest': 'استراحة الأمير أحمد - وادي حنيفة',
+      'projects.drFahdRest': 'استراحة الدكتور فهد السماري - العيينة',
+      'projects.sheikhAliRest': 'استراحة الشيخ علي الشدي - حريملاء',
+      'projects.reefCenter': 'الواجهة الحجرية لمركز ريف - شركة السعيدان',
+      'projects.officeHouses': 'الأدراج الخارجية - شركة البيوت المكتبية - طريق العروبة',
+      'projects.sheikhAhmedVilla': 'فيلا الشيخ أحمد الموسى - الملقا',
+      'projects.fatimaMosque': 'مسجد فاطمة عبد اللطيف الموسى - الأحساء - حي السليمانية',
+      'projects.saadEddeinNahdha': 'حلويات سعد الدين - طريق النهضة',
+      'projects.saadEddeinMurabaa': 'حلويات سعد الدين - المربع',
+      'projects.saadeddinUniversity': 'مطاعم وكافيهات سعد الدين - جامعة الأمير سلطان',
+      'projects.bajaShopes': 'محلات باجة - طريق أنس بن مالك',
+      'projects.alQahtaniTransport': 'شركة القحطاني للنقليات الآلية',
+      'projects.qassimGardens': 'شركة بساتين القصيم',
+      'projects.ministryEducation': 'وزارة التعليم',
+      'projects.establishmentSecurity': 'أمن المنشآت',
+      'projects.roadsSecurity': 'أمن الطرق',
+      'projects.dammamHospital': 'مستشفى الدمام المركزية',
+      'projects.rubouaQassim': 'شركة ربوع القصيم للتجارة',
+      'projects.amwajKhaleej': 'شركة أمواج الخليج للمقاولات والتوريدات العامة',
+      'projects.alHawadi': 'شركة الهوادي المحدودة',
+      'projects.alAmmar': 'شركة العمار للمقاولات',
+      'projects.cyberSecurity': 'الأمن السيبراني',
+      
+      // Clients
+      'clients.label': 'عملاؤنا',
+      'clients.title': 'شركاء موثوقون',
+      'clients.subtitle': 'نفخر بالعمل مع المنظمات الرائدة عبر مختلف الصناعات.',
+      
+      // Certificates
+      'certificates.label': 'الشهادات',
+      'certificates.title': 'شهاداتنا',
+      'certificates.subtitle': 'نحافظ على أعلى المعايير ونحمل شهادات صناعية متنوعة.',
+      'certificates.viewAll': 'عرض جميع الشهادات',
+      
+      // Contact
+      'contact.label': 'اتصل بنا',
+      'contact.title': 'تواصل معنا',
+      'contact.subtitle': 'هل لديك مشروع في الاعتبار؟ دعنا نناقش كيف يمكننا تحويل رؤيتك إلى حقيقة.',
+      'contact.email': 'البريد الإلكتروني',
+      'contact.phone': 'الهاتف',
+      'contact.address': 'العنوان',
+      'contact.form.name': 'الاسم الكامل',
+      'contact.form.namePlaceholder': 'اسمك',
+      'contact.form.email': 'عنوان البريد الإلكتروني',
+      'contact.form.emailPlaceholder': 'بريدك@example.com',
+      'contact.form.phone': 'رقم الهاتف',
+      'contact.form.phonePlaceholder': '+966 50 000 0000',
+      'contact.form.department': 'القسم',
+      'contact.form.departmentSelect': 'اختر القسم',
+      'contact.form.departmentBusiness': 'قسم الأعمال',
+      'contact.form.departmentPersonal': 'القسم الشخصي',
+      'contact.form.departmentSupport': 'قسم الدعم',
+      'contact.form.departmentOthers': 'أخرى',
+      'contact.form.message': 'الرسالة',
+      'contact.form.messagePlaceholder': 'أخبرنا عن مشروعك...',
+      'contact.form.submit': 'إرسال الرسالة',
+      'contact.form.success': 'شكراً لرسالتك! سنعود إليك قريباً.',
+      'contact.banking': 'معلومات مصرفية',
+      'contact.accountNumber': 'رقم الحساب الجاري',
+      'contact.iban': 'رقم الآيبان',
+      'contact.accountNumberValue': '1000369469940',
+      'contact.ibanValue': 'SA4620000001000369469940',
+      
+      // Organizational Structure
+      'org.label': 'فريقنا',
+      'org.title': 'الهيكل التنظيمي',
+      'org.subtitle': 'فريقنا المتفاني من المحترفين عبر جميع الأقسام',
+      'org.management': 'الإدارة',
+      'org.chairman': 'رئيس مجلس الإدارة / المدير العام',
+      'org.chairmanName': 'م . ثامر بن محمد',
+      'org.administrators': 'الإداريين',
+      'org.costAccountant': 'محاسب تكاليف',
+      'org.publicAccountant': 'محاسب عام',
+      'org.financialManager': 'مدير مالي',
+      'org.executiveSecretary': 'سكرتير تنفيذي',
+      'org.engineers': 'المهندسين والمراقبين',
+      'org.foreman': 'مراقب عمال',
+      'org.surveyor': 'مساح',
+      'org.architect': 'مهندس معماري',
+      'org.civilEngineer': 'مهندس مدني',
+      'org.technicians': 'الفنيين والكفاءات',
+      'org.total': 'الإجمالي',
+      
+      // Gallery
+      'gallery.label': 'المعرض',
+      'gallery.title': 'معرض المشاريع',
+      'gallery.subtitle': 'استكشف محفظتنا الواسعة من المشاريع المكتملة والأعمال الجارية.',
+      
+      // Footer
+      'footer.description': 'تأسست شركة الثروة الخليجية للتجارة القابضة كشركة سعودية الموطن عالمية المنهج، تقدم خدمات شاملة في البناء والهندسة والتصميم.',
+      'footer.quickLinks': 'روابط سريعة',
+      'footer.services': 'الخدمات',
+      'footer.contactInfo': 'معلومات الاتصال',
+      'footer.copyright': '© 2025 شركة الثروة الخليجية للتجارة القابضة. جميع الحقوق محفوظة.',
+      'footer.privacy': 'سياسة الخصوصية',
+    },
+  };
+
+  const t = (key: string): string => {
+    return translations[language][key] || key;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      <div dir={language === 'ar' ? 'rtl' : 'ltr'} className={language === 'ar' ? 'arabic-layout' : ''}>
+        {children}
+      </div>
+    </LanguageContext.Provider>
+  );
+};
+
