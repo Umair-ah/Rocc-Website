@@ -230,9 +230,9 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       
       // Hero
       'hero.established': 'تأسست عام 2013',
-      'hero.title.line1': 'شركة ثراء الخليج القابضة',
-      'hero.title.line2': 'بناء مستقبل مزدهر',
-      'hero.subtitle': 'شركة ثراء الخليج القابضة هي شركة سعودية رائدة ذات محفظة أعمال متنوعة، ملتزمة بالتميز والابتكار.',
+      'hero.title.line1': 'شركة الثروة الخليجية',
+      'hero.title.line2': 'القابضة للتجارة والمقاولات',
+      'hero.subtitle': 'شركة الثروة الخليجية هي شركة سعودية رائدة ذات محفظة أعمال متنوعة، ملتزمة بالتميز والابتكار.',
       'hero.button.projects': 'عرض مشاريعنا',
       'hero.button.quote': 'احصل على عرض سعر',
       'hero.stat.years': 'سنوات من الخبرة',
