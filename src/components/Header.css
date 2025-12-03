@@ -4,15 +4,15 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #d3a958;
+  background: #ffffff;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
 .header.scrolled {
-  background: #d3a958;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   padding: 0;
 }
 
@@ -58,13 +58,13 @@
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #172e4b;
   line-height: 1;
 }
 
 .logo-subtitle {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #5a6b7c;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 2px;
@@ -89,7 +89,7 @@
 
 .nav-menu a {
   font-weight: 500;
-  color: #ffffff;
+  color: #d3a958;
   font-size: 0.95rem;
   position: relative;
   padding: 0.5rem 0.3rem;
@@ -99,8 +99,8 @@
 }
 
 .nav-menu a:hover {
-  color: #ffffff;
-  opacity: 1;
+  color: #d3a958;
+  opacity: 0.8;
 }
 
 .nav-menu a::after {
@@ -110,7 +110,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #ffffff;
+  background: #d3a958;
   transition: var(--transition);
 }
 
@@ -119,13 +119,12 @@
 }
 
 .lang-link {
-  background: rgba(255, 255, 255, 0.15);
+  background: #d3a958;
   color: #ffffff !important;
   padding: 0.6rem 1.2rem !important;
   border-radius: 6px;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  border: 1px solid #d3a958;
   transition: var(--transition);
 }
 
@@ -134,10 +133,10 @@
 }
 
 .lang-link:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: #b8942f;
+  border-color: #b8942f;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(211, 169, 88, 0.3);
 }
 
 .mobile-menu-toggle {
@@ -151,7 +150,7 @@
 .mobile-menu-toggle span {
   width: 25px;
   height: 3px;
-  background: #ffffff;
+  background: #d3a958;
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -186,7 +185,7 @@
   .nav-menu {
     position: fixed;
     top: 70px;
-    background: #d3a958;
+    background: #ffffff;
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
@@ -195,13 +194,13 @@
   }
 
   .nav-menu a {
-    color: #ffffff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d3a958;
+    border-bottom: 1px solid rgba(211, 169, 88, 0.1);
     padding: 1rem 0;
   }
 
   .nav-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(211, 169, 88, 0.1);
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 6px;
