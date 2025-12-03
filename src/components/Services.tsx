@@ -28,7 +28,7 @@ const Services = () => {
   return (
     <section id="services" className="section services-section">
       <div className="container">
-        <span className="section-label">{t('services.label')}</span>
+        {/* <span className="section-label">{t('services.label')}</span> */}
         <h2 className="section-title">{t('services.title')}</h2>
         <p className="section-subtitle">
           {t('services.subtitle')}

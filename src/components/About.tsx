@@ -11,15 +11,15 @@ const About = () => {
           <div className="about-text">
             {/* <span className="section-label">{t('about.label')}</span> */}
             <h2 className="section-title">{t('about.title')}</h2>
-            <p className="about-description">
-              {t('about.description1')}
-            </p>
-            <p className="about-description">
-              {t('about.description2')}
-            </p>
-            <p className="about-description">
-              {t('about.description3')}
-            </p>
+              <p className="about-description">
+                {t('about.description1')}
+              </p>
+              <p className="about-description">
+                {t('about.description2')}
+              </p>
+              <p className="about-description">
+                {t('about.description3')}
+              </p>
             <div className="chairman-speech">
               <h3 className="speech-title">{t('about.chairman')}</h3>
               <p className="speech-text">

@@ -3,7 +3,7 @@
 }
 
 .about-content {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
@@ -52,7 +52,7 @@
   line-height: 1;
   opacity: 0.3;
   position: absolute;
-  top: 1rem;
+  /* top: 1rem; */
   left: 1.5rem;
 }
 
@@ -169,6 +169,7 @@
   position: relative;
   overflow: hidden;
   min-height: 400px;
+  margin-top: 20px;
 }
 
 .visual-card-bg {
