@@ -24,9 +24,13 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   line-height: 1;
   display: block;
+}
+
+.arabic-layout .footer-logo .logo-text {
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
 }
 
 .footer-logo .logo-subtitle {
@@ -91,7 +95,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   padding-left: 0.5rem;
 }
 
@@ -102,7 +106,7 @@
 }
 
 .footer-contact strong {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   font-weight: 600;
 }
 
@@ -137,7 +141,7 @@
 }
 
 .footer-bottom-links a:hover {
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .footer-bottom-links span {

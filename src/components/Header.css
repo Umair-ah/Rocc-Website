@@ -41,6 +41,10 @@
   line-height: 1;
 }
 
+.arabic-layout .logo-text {
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+}
+
 .logo-subtitle {
   font-size: 0.75rem;
   color: var(--text-light);

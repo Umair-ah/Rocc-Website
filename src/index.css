@@ -60,7 +60,12 @@ h1, h2, h3, h4, h5, h6 {
 .arabic-layout h4,
 .arabic-layout h5,
 .arabic-layout h6 {
-  font-family: 'Amiri', 'Cairo', serif;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+}
+
+.arabic-layout .hero-title,
+.arabic-layout .hero-subtitle {
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
 }
 
 h1 {
@@ -127,7 +132,7 @@ img {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  background: var(--secondary-color);
   border-radius: 2px;
 }
 
@@ -154,7 +159,7 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  background: var(--secondary-color);
   color: var(--text-white);
   box-shadow: var(--shadow-md);
 }
@@ -162,17 +167,17 @@ img {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  background: linear-gradient(135deg, var(--accent-dark), var(--secondary-dark));
+  background: var(--secondary-dark);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--text-white);
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--secondary-color);
 }
 
 .btn-outline:hover {
-  background: var(--accent-color);
+  background: var(--secondary-color);
   color: var(--text-white);
   transform: translateY(-2px);
 }

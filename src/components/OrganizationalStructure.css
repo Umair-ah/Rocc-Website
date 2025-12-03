@@ -23,7 +23,7 @@
   color: var(--primary-color);
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .org-grid {
@@ -62,7 +62,7 @@
 .org-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .org-item:hover .org-name {
@@ -72,7 +72,7 @@
 .org-count {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .org-item:hover .org-count {
@@ -81,7 +81,7 @@
 
 .org-total {
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  background: var(--secondary-color);
   color: var(--text-white);
 }
 
