@@ -34,8 +34,9 @@ const Header = () => {
       <div className="container">
         <nav className="nav">
           <div className="logo" onClick={() => scrollToSection('home')}>
-            <span className="logo-text">GWTH</span>
-            <span className="logo-subtitle">Gulf Wealth Trading</span>
+            {/* <span className="logo-text">GWTH</span>
+            <span className="logo-subtitle">Gulf Wealth Trading</span> */}
+            <img src="/images/company-logo.jpg" alt="Gulf Wealth Trading" className="logo-image" />
           </div>
           
           <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
