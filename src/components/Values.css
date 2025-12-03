@@ -1,5 +1,5 @@
 .values-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: var(--text-white);
 }
 
@@ -37,7 +37,7 @@
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-8px);
   border-color: var(--accent-color);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(23, 46, 75, 0.3);
 }
 
 .value-icon {

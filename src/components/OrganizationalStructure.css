@@ -81,7 +81,7 @@
 
 .org-total {
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
   color: var(--text-white);
 }
 

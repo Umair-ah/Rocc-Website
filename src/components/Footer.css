@@ -64,10 +64,10 @@
 }
 
 .footer-social .social-link:hover {
-  background: var(--accent-color);
-  color: var(--text-dark);
+  background: var(--secondary-color);
+  color: var(--text-white);
   transform: translateY(-4px);
-  border-color: var(--accent-color);
+  border-color: var(--secondary-color);
 }
 
 .footer-title {
