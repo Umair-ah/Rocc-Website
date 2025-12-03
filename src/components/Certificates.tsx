@@ -4,10 +4,10 @@ import './Certificates.css';
 const Certificates = () => {
   const { t } = useLanguage();
   const certificates = [
-    { name: 'Commercial Register', icon: '📜', number: '1010798697' },
-    { name: 'VAT Registration', icon: '💰', number: '311278860600003' },
-    { name: 'Saudization Certificate', icon: '✅', number: '171728-17984411' },
-    { name: 'Social Insurance', icon: '🛡️', number: '632619588' },
+    { nameKey: 'certificates.commercialRegister', icon: '📜', numberKey: 'certificates.commercialRegisterNumber' },
+    { nameKey: 'certificates.vatRegistration', icon: '💰', numberKey: 'certificates.vatNumber' },
+    { nameKey: 'certificates.saudization', icon: '✅', numberKey: 'certificates.saudizationNumber' },
+    { nameKey: 'certificates.socialInsurance', icon: '🛡️', numberKey: 'certificates.socialInsuranceNumber' },
   ];
 
   return (
@@ -22,8 +22,8 @@ const Certificates = () => {
           {certificates.map((cert, index) => (
             <div key={index} className="certificate-card">
               <div className="certificate-icon">{cert.icon}</div>
-              <h3 className="certificate-name">{cert.name}</h3>
-              {cert.number && <p className="certificate-number">{cert.number}</p>}
+              <h3 className="certificate-name">{t(cert.nameKey)}</h3>
+              {cert.numberKey && <p className="certificate-number">{t(cert.numberKey)}</p>}
             </div>
           ))}
         </div>

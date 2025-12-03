@@ -4,24 +4,24 @@ import './Clients.css';
 const Clients = () => {
   const { t } = useLanguage();
   const clients = [
-    { name: 'Finance Ministry', logo: '', fallback: '🏛️' },
-    { name: 'Ministry of Hajj', logo: '', fallback: '🕌' },
-    { name: 'General Security', logo: '', fallback: '🛡️' },
-    { name: 'Department of Defense', logo: '', fallback: '⚔️' },
-    { name: 'Social Security', logo: '', fallback: '🏦' },
-    { name: 'Chamber of Commerce', logo: '', fallback: '🏢' },
-    { name: 'Kingdom Dates', logo: '', fallback: '🌴' },
-    { name: 'Al-Qahtani Transport', logo: '', fallback: '🚛' },
-    { name: 'Qassim Gardens', logo: '', fallback: '🌳' },
-    { name: 'Ministry of Education', logo: '', fallback: '📚' },
-    { name: 'Establishment Security', logo: '', fallback: '🔒' },
-    { name: 'Roads Security', logo: '', fallback: '🛣️' },
-    { name: 'Dammam Hospital', logo: '', fallback: '🏥' },
-    { name: 'Ruboua Al-Qassim', logo: '', fallback: '🏢' },
-    { name: 'Amwaj Al Khaleej', logo: '', fallback: '🌊' },
-    { name: 'Al-Hawadi', logo: '', fallback: '🏢' },
-    { name: 'Al Ammar', logo: '', fallback: '🏗️' },
-    { name: 'Cyber Security', logo: '', fallback: '🔐' },
+    { nameKey: 'clients.financeMinistry', logo: '', fallback: '🏛️' },
+    { nameKey: 'clients.ministryHajj', logo: '', fallback: '🕌' },
+    { nameKey: 'clients.generalSecurity', logo: '', fallback: '🛡️' },
+    { nameKey: 'clients.defense', logo: '', fallback: '⚔️' },
+    { nameKey: 'clients.socialSecurity', logo: '', fallback: '🏦' },
+    { nameKey: 'clients.chamberCommerce', logo: '', fallback: '🏢' },
+    { nameKey: 'clients.kingdomDates', logo: '', fallback: '🌴' },
+    { nameKey: 'clients.alQahtaniTransport', logo: '', fallback: '🚛' },
+    { nameKey: 'clients.qassimGardens', logo: '', fallback: '🌳' },
+    { nameKey: 'clients.ministryEducation', logo: '', fallback: '📚' },
+    { nameKey: 'clients.establishmentSecurity', logo: '', fallback: '🔒' },
+    { nameKey: 'clients.roadsSecurity', logo: '', fallback: '🛣️' },
+    { nameKey: 'clients.dammamHospital', logo: '', fallback: '🏥' },
+    { nameKey: 'clients.rubouaQassim', logo: '', fallback: '🏢' },
+    { nameKey: 'clients.amwajKhaleej', logo: '', fallback: '🌊' },
+    { nameKey: 'clients.alHawadi', logo: '', fallback: '🏢' },
+    { nameKey: 'clients.alAmmar', logo: '', fallback: '🏗️' },
+    { nameKey: 'clients.cyberSecurity', logo: '', fallback: '🔐' },
   ];
 
   return (
@@ -39,7 +39,7 @@ const Clients = () => {
                 {client.logo ? (
                   <img 
                     src={client.logo} 
-                    alt={client.name}
+                    alt={t(client.nameKey)}
                     className="client-logo-img"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -53,7 +53,7 @@ const Clients = () => {
                   {client.fallback}
                 </div>
               </div>
-              <p className="client-name">{client.name}</p>
+              <p className="client-name">{t(client.nameKey)}</p>
             </div>
           ))}
         </div>

@@ -62,20 +62,8 @@ const Contact = () => {
                 Riyadh 12313, Saudi Arabia
               </p>
             </div>
-            <div className="info-card">
-              <div className="info-icon">🏦</div>
-              <h3>{t('contact.banking')}</h3>
-              <p>
-                <strong>{t('contact.accountNumber')}:</strong> {t('contact.accountNumberValue')}<br />
-                <strong>{t('contact.iban')}:</strong> {t('contact.ibanValue')}
-              </p>
-            </div>
-            <div className="social-links">
-              <a href="#" className="social-link" aria-label="Facebook">📘</a>
-              <a href="#" className="social-link" aria-label="Twitter">🐦</a>
-              <a href="#" className="social-link" aria-label="Instagram">📷</a>
-              <a href="#" className="social-link" aria-label="LinkedIn">💼</a>
-            </div>
+     
+     
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
