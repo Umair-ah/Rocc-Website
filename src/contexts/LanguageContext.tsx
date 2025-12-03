@@ -303,7 +303,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'values.subtitle': 'قيمنا الأساسية توجه كل قرار نتخذه وكل مشروع نقوم به.',
       'values.trust': 'الثقة',
       'values.excellence': 'التميز',
-      'values.accountability': 'المساءلة',
+      'values.accountability': 'المسئولية',
       'values.collaboration': 'التعاون',
       'values.service': 'الخدمة',
       'values.innovation': 'الابتكار',
