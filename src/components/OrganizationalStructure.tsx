@@ -19,6 +19,14 @@ const OrganizationalStructure = () => {
               <div className="org-role">{t('org.chairman')}</div>
               <div className="org-name">{t('org.chairmanName')}</div>
             </div>
+            <div className="org-item">
+              <div className="org-role">{t('org.ceo')}</div>
+              <div className="org-name">{t('org.ceoName')}</div>
+            </div>
+            <div className="org-item">
+              <div className="org-role">{t('org.lawyer')}</div>
+              <div className="org-name">{t('org.lawyerName')}</div>
+            </div>
           </div>
 
           <div className="org-level">

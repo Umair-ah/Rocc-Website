@@ -48,6 +48,19 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+}
+
+.certificate-icon-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 
 .certificate-card:hover .certificate-icon {
