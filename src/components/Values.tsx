@@ -1,38 +1,37 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import './Values.css';
-
 const Values = () => {
   const { t } = useLanguage();
 
   const values = [
     { 
       key: 'values.trust', 
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=400&fit=crop&auto=format',
+      image: '/images/trust.jpg',
       fallback: '🤝'
     },
     { 
       key: 'values.excellence', 
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop&auto=format',
+      image: '/images/excellence.jpg',
       fallback: '⭐'
     },
     { 
       key: 'values.accountability', 
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&fit=crop&auto=format',
+      image: '/images/accountability.jpg',
       fallback: '📊'
     },
     { 
       key: 'values.collaboration', 
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop&auto=format',
+      image: '/images/collaboration.jpg',
       fallback: '👥'
     },
     { 
       key: 'values.service', 
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=400&fit=crop&auto=format',
+      image: '/images/service.jpg',
       fallback: '💼'
     },
     { 
       key: 'values.innovation', 
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop&auto=format',
+      image: '/images/innovation.jpg',
       fallback: '💡'
     },
     { 
