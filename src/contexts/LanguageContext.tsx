@@ -36,7 +36,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'nav.arabic': 'العربية',
       
       // Hero
-      'hero.established': 'Established 2013',
+      'hero.established': 'Established 2018',
       'hero.title.line1': 'Gulf Wealth Trading Holding Co.',
       'hero.title.line2': 'Building a Prosperous Future',
       'hero.subtitle': 'Gulf Wealth Trading Holding Co. is a leading Saudi company with a diverse portfolio of businesses, committed to excellence and innovation.',
@@ -259,7 +259,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'nav.arabic': 'English',
       
       // Hero
-      'hero.established': 'تأسست عام 2013',
+      'hero.established': 'تأسست عام 2018',
       'hero.title.line1': 'شركة الثروة الخليجية',
       'hero.title.line2': 'القابضة للتجارة والمقاولات',
       'hero.subtitle': 'شركة الثروة الخليجية هي شركة سعودية رائدة ذات محفظة أعمال متنوعة، ملتزمة بالتميز والابتكار.',
