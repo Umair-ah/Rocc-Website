@@ -63,7 +63,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'about.feature.innovation.desc': 'Modern solutions and technologies',
       'about.vision.title': 'Our Vision',
       'about.vision.text': 'Gulf Wealth Trading Holding Co aim to become one of the leading company in contracting sector, architectural design and interior design in the Kingdom Saudi Arabia.',
-      'about.chairman': 'A. Thamer bin Mohammed',
+      'about.chairman': 'Rashid Bin Zaid Al-Muhayni',
       'about.vision.button': 'Learn More',
       
       // Services
@@ -223,12 +223,14 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'org.viceChairmanName': 'Zaid Bin Rashid Al-Muhayni',
       'org.ceo': 'CEO and Board Member',
       'org.ceoName': 'Saeed Riyadh Zainah',
-      'org.legalConsultant': 'Legal Consultant and Board Member',
+      'org.legalConsultant': 'Head of Legal Department',
       'org.legalConsultantName': 'Dr. Shurooq Bint Abdul Mu\'een Al-Barqati',
       'org.communicationsEngineer': 'Communications and IT Engineer',
       'org.communicationsEngineerName': 'Radwan Al-Dalal',
       'org.legalManagement': 'Legal Management',
       'org.legalManagementName': 'Mutaib Bin Mufreh Al-Qahtani',
+      'org.corporateServicesManager': 'Director of Corporate Services',
+      'org.corporateServicesManagerName': 'Dr. Muhannad Riyad Zeina',
       'org.administrators': 'Administrators',
       'org.costAccountant': 'Cost Accountant',
       'org.publicAccountant': 'Public Accountant',
@@ -248,7 +250,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'gallery.subtitle': 'Explore our extensive portfolio of completed projects and ongoing work.',
       
       // Footer
-      'footer.description': 'Gulf Wealth Trading Holding Co. was established as a Saudi company with a global approach, providing comprehensive construction, engineering, and design services.',
+      'footer.description': 'Gulf Wealth Trading and Contracting Holding Co. was established as a Saudi company with a global approach, providing comprehensive construction, engineering, design, technology, and IT services.',
       'footer.quickLinks': 'Quick Links',
       'footer.services': 'Services',
       'footer.contactInfo': 'Contact Info',
@@ -292,7 +294,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'about.feature.innovation.desc': 'حلول وتقنيات حديثة',
       'about.vision.title': 'رؤيتنا',
       'about.vision.text': 'تهدف شركة الثروة الخليجية للتجارة القابضة إلى أن تصبح واحدة من الشركات الرائدة في قطاع المقاولات والتصميم المعماري والتصميم الداخلي في المملكة العربية السعودية.',
-      'about.chairman': 'م . ثامر بن محمد',
+      'about.chairman': 'راشد بن زيد المهيني',
       'about.vision.button': 'اعرف المزيد',
       
       // Services
@@ -452,12 +454,14 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'org.viceChairmanName': 'زيد بن راشد المهيني',
       'org.ceo': 'المدير التنفيذي وعضو مجلس الإدارة',
       'org.ceoName': 'سعيد رياض زينه',
-      'org.legalConsultant': 'المستشارة القانونية وعضوة مجلس الإدارة',
+      'org.legalConsultant': 'رئيسة القسم القانوني',
       'org.legalConsultantName': 'المحامية الدكتورة شروق بنت عبدالمعين البركاتي',
       'org.communicationsEngineer': 'مهندس الاتصالات وتقنية المعلومات',
       'org.communicationsEngineerName': 'المهندس رضوان الدلال',
       'org.legalManagement': 'الإدارة القانونية',
       'org.legalManagementName': 'المحامي متعب بن مفرح القحطاني',
+      'org.corporateServicesManager': 'مدير خدمة كبار الشركات',
+      'org.corporateServicesManagerName': 'د / مهند رياض زينه',
       'org.administrators': 'الإداريين',
       'org.costAccountant': 'محاسب تكاليف',
       'org.publicAccountant': 'محاسب عام',
@@ -477,7 +481,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'gallery.subtitle': 'استكشف محفظتنا الواسعة من المشاريع المكتملة والأعمال الجارية.',
       
       // Footer
-      'footer.description': 'تأسست شركة الثروة الخليجية للتجارة القابضة كشركة سعودية الموطن عالمية المنهج، تقدم خدمات شاملة في البناء والهندسة والتصميم.',
+      'footer.description': 'تأسست شركة الثروة الخليجية للتجارة والمقاولات القابضة كشركة سعودية الموطن عالمية المنهج، تقدم خدمات شاملة في البناء والهندسة والتصميم والتكنولوجيا وتقنية المعلومات.',
       'footer.quickLinks': 'روابط سريعة',
       'footer.services': 'الخدمات',
       'footer.contactInfo': 'معلومات الاتصال',

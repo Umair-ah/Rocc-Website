@@ -39,6 +39,10 @@ const OrganizationalStructure = () => {
               <div className="org-role">{t('org.legalManagement')}</div>
               <div className="org-name">{t('org.legalManagementName')}</div>
             </div>
+            <div className="org-item">
+              <div className="org-role">{t('org.corporateServicesManager')}</div>
+              <div className="org-name">{t('org.corporateServicesManagerName')}</div>
+            </div>
           </div>
 
           <div className="org-level">
