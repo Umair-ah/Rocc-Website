@@ -20,12 +20,24 @@ const OrganizationalStructure = () => {
               <div className="org-name">{t('org.chairmanName')}</div>
             </div>
             <div className="org-item">
+              <div className="org-role">{t('org.viceChairman')}</div>
+              <div className="org-name">{t('org.viceChairmanName')}</div>
+            </div>
+            <div className="org-item">
+              <div className="org-role">{t('org.legalConsultant')}</div>
+              <div className="org-name">{t('org.legalConsultantName')}</div>
+            </div>
+            <div className="org-item">
               <div className="org-role">{t('org.ceo')}</div>
               <div className="org-name">{t('org.ceoName')}</div>
             </div>
             <div className="org-item">
-              <div className="org-role">{t('org.lawyer')}</div>
-              <div className="org-name">{t('org.lawyerName')}</div>
+              <div className="org-role">{t('org.communicationsEngineer')}</div>
+              <div className="org-name">{t('org.communicationsEngineerName')}</div>
+            </div>
+            <div className="org-item">
+              <div className="org-role">{t('org.legalManagement')}</div>
+              <div className="org-name">{t('org.legalManagementName')}</div>
             </div>
           </div>
 
