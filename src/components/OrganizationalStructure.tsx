@@ -59,6 +59,7 @@ const OrganizationalStructure = () => {
               <div className="org-item">
                 <div className="org-role">{t('org.executiveSecretary')}</div>
                 <div className="org-count">(1)</div>
+                
               </div>
             </div>
           </div>
@@ -99,4 +100,5 @@ const OrganizationalStructure = () => {
 };
 
 export default OrganizationalStructure;
+
 
