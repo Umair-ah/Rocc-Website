@@ -51,7 +51,8 @@ const Contact = () => {
             <div className="info-card">
               <div className="info-icon">📞</div>
               <h3>{t('contact.phone')}</h3>
-              <p>00966533418617</p>
+              <p>+966554434014</p>
+              <p>+966554497887</p>
             </div>
             <div className="info-card">
               <div className="info-icon">📍</div>

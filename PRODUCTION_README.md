@@ -70,7 +70,7 @@ The website can be deployed to:
 ## 📝 Contact Information
 
 - **Email**: altharwahcompany@gmail.com
-- **Phone**: 00966533418617
+- **Phone**: +966554434014
 - **Address**: Sheikh Mubarak Al-Sabah, Al-Olayya District 3872, Riyadh 12313, Saudi Arabia
 - **Account**: 1000369469940
 - **IBAN**: SA4620000001000369469940

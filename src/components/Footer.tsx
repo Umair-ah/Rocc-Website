@@ -55,7 +55,8 @@ const Footer = () => {
             <h3 className="footer-title">{t('footer.contactInfo')}</h3>
             <div className="footer-contact">
               <p><strong>{t('contact.email')}:</strong> altharwahcompany@gmail.com</p>
-              <p><strong>{t('contact.phone')}:</strong> 00966533418617</p>
+              <p><strong>{t('contact.phone')}:</strong> +966554434014</p>
+              <p><strong>{t('contact.phone')}:</strong> +96655449788</p>
               <p className="footer-address">
                 <strong>{t('contact.address')}:</strong><br />
                 Sheikh Mubarak Al-Sabah<br />
