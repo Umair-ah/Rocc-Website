@@ -26,6 +26,11 @@
   align-items: center;
   padding: 1rem 0;
   gap: 2rem;
+  direction: ltr;
+}
+
+.arabic-layout .nav {
+  direction: rtl;
 }
 
 .logo {
@@ -79,6 +84,12 @@
   padding: 0;
   flex: 1;
   justify-content: flex-end;
+  direction: ltr;
+}
+
+.arabic-layout .nav-menu {
+  justify-content: flex-start;
+  direction: rtl;
 }
 
 @media (min-width: 969px) {
@@ -168,6 +179,15 @@
 }
 
 /* RTL Support */
+.arabic-layout .header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
 .arabic-layout .nav-menu a::after {
   right: 0;
   left: auto;
