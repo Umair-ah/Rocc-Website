@@ -36,7 +36,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'nav.arabic': 'العربية',
       
       // Hero
-      'hero.established': 'Established 2018',
+      'hero.established': 'Established 2019',
       'hero.title.line1': 'Gulf Wealth Trading Holding Co.',
       'hero.title.line2': 'Building a Prosperous Future',
       'hero.subtitle': 'Gulf Wealth Trading Holding Co. is a leading Saudi company with a diverse portfolio of businesses, committed to excellence and innovation.',
@@ -145,6 +145,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'projects.alHawadi': 'Al-Hawadi Company Limited',
       'projects.alAmmar': 'Al Ammar Contracting Company',
       'projects.cyberSecurity': 'Cyber Security',
+      'projects.roshanAlDurah': 'Al-Durah District - Roshan - Riyadh',
       
       // Clients
       'clients.label': 'Our Clients',
@@ -182,6 +183,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'certificates.vatNumber': '311278860600003',
       'certificates.saudizationNumber': '171728-17984411',
       'certificates.socialInsuranceNumber': '632619588',
+      'certificates.certificatesShadah': 'Saudi Real Estate Institute',
+      'certificates.certificatesShadahNumber': '337381',
       
       // Contact
       'contact.label': 'Contact Us',
@@ -223,8 +226,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'org.viceChairmanName': 'Zaid Bin Rashid Al-Muhayni',
       'org.ceo': 'CEO and Board Member',
       'org.ceoName': 'Saeed Riyadh Zainah',
-      'org.legalConsultant': 'Head of Legal Department',
-      'org.legalConsultantName': 'Dr. Shurooq Bint Abdul Mu\'een Al-Barqati',
+      'org.legalConsultant': 'Head of Legal Department and Board Member',
+      'org.legalConsultantName': 'Dr. Shurooq Bint Abdul Mu\'een Al-Barkati',
       'org.communicationsEngineer': 'Communications and IT Engineer',
       'org.communicationsEngineerName': 'Radwan Al-Dalal',
       'org.legalManagement': 'Legal Management',
@@ -376,6 +379,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'projects.alHawadi': 'شركة الهوادي المحدودة',
       'projects.alAmmar': 'شركة العمار للمقاولات',
       'projects.cyberSecurity': 'الأمن السيبراني',
+      'projects.roshanAlDurah': 'حي الدرة - روشن - الرياض',
       
       // Clients
       'clients.label': 'عملاؤنا',
@@ -413,6 +417,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'certificates.vatNumber': '311278860600003',
       'certificates.saudizationNumber': '171728-17984411',
       'certificates.socialInsuranceNumber': '632619588',
+      'certificates.certificatesShadah': 'المعهد العقاري السعودي',
+      'certificates.certificatesShadahNumber': '337381',
       
       // Contact
       'contact.label': 'اتصل بنا',
@@ -454,7 +460,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       'org.viceChairmanName': 'زيد بن راشد المهيني',
       'org.ceo': 'المدير التنفيذي وعضو مجلس الإدارة',
       'org.ceoName': 'سعيد رياض زينه',
-      'org.legalConsultant': 'رئيسة القسم القانوني',
+      'org.legalConsultant': 'رئيس الادارة القانونية وعضوة مجلس الادارة',
       'org.legalConsultantName': 'المحامية الدكتورة شروق بنت عبدالمعين البركاتي',
       'org.communicationsEngineer': 'مهندس الاتصالات وتقنية المعلومات',
       'org.communicationsEngineerName': 'المهندس رضوان الدلال',

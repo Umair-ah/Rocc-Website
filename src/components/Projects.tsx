@@ -37,9 +37,20 @@ const Projects = () => {
     { titleKey: 'projects.sheikhAhmedVilla', categoryKey: 'projects.residential', image: '/images/30.JPG', fallback: '🏡' },
     { titleKey: 'projects.fatimaMosque', categoryKey: 'projects.commercial', image: '/images/31.JPG', fallback: '🕌' },
     { titleKey: 'projects.saadEddeinNahdha', categoryKey: 'projects.entertainment', image: '/images/32.JPG', fallback: '🍰' },
-    { titleKey: 'projects.saadEddeinMurabaa', categoryKey: 'projects.entertainment', image: '/images/33.JPG', fallback: '🍰' },
-    { titleKey: 'projects.saadeddinUniversity', categoryKey: 'projects.entertainment', image: '/images/34.JPG', fallback: '☕' },
-    { titleKey: 'projects.bajaShopes', categoryKey: 'projects.commercial', image: '/images/35.JPG', fallback: '🏪' },
+    // { titleKey: 'projects.saadEddeinMurabaa', categoryKey: 'projects.entertainment', image: '/images/33.JPG', fallback: '🍰' },
+    // { titleKey: 'projects.saadeddinUniversity', categoryKey: 'projects.entertainment', image: '/images/34.JPG', fallback: '☕' },
+    // { titleKey: 'projects.bajaShopes', categoryKey: 'projects.commercial', image: '/images/35.JPG', fallback: '🏪' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن1.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن1.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن2.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن1.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن4.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن5.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن6.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن7.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن8.jpeg', fallback: '🏡' },
+    { titleKey: 'projects.roshanAlDurah', categoryKey: 'projects.residential', image: '/images/روشن9.jpeg', fallback: '🏡' },
+ 
   ];
 
   return (

@@ -24,6 +24,11 @@ const Certificates = () => {
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=400&fit=crop&auto=format',
       numberKey: 'certificates.socialInsuranceNumber' 
     },
+    { 
+      nameKey: 'certificates.certificatesShadah', 
+      image: '/images/cert-shadah.jpg',
+      numberKey: 'certificates.certificatesShadahNumber' 
+    },
   ];
 
   return (
